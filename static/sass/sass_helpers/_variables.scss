@@ -1,0 +1,46 @@
+/*Color*/
+$color-black: #1F1F1F;
+$color-darkGrey: #3F3F3F;
+$color-mediumGrey: #D1D1D1;
+$color-lightGrey: #C8C8C8;
+$color-offWhite: #F5F5F5;
+$color-white: #FFF;
+$color-blue: #324C5D;
+$color-green: #46B19D;
+$color-yellow: #EFC94C;
+$color-orange: #E3793F;
+$color-red: #DF494A;
+
+$google_font: true;
+
+$font-name: 'Lato';
+$font-family: '300,400,700';
+$font-import: 'http://fonts.googleapis.com/css?family=Lato:300,400,700';
+
+
+/*Typography*/
+$font-condensed: $font-name, sans-serif;
+$font-regular:  $font-name, sans-serif;
+$font-bold: $font-name, sans-serif;
+$font-gliphs: 'icons';
+$font-size1: 30;
+$font-size2: 24;
+$font-size3: 18;
+$font-size4: 16;
+$font-size5: 13;
+$font-size6: 11;
+
+/*Grid*/
+$col-1: 8.33%;
+$col-2: 16.667%;
+$col-3: 25%;
+$col-4: 33.33%;
+$col-5: 41.66%;
+$col-6: 50%;
+$col-7: 58.33%;
+$col-8: 66.66%;
+$col-9: 75%;
+$col-10: 83.33%;
+$col-11: 91.67%;
+$col-12: 100%;
+

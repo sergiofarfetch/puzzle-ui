@@ -1,0 +1,106 @@
+
+/*Font face*/
+@mixin font-face($font-path, $font-family, $font-filename, $font-weight : normal, $font-style : normal) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('#{$font-path}#{$font-filename}.eot');
+    src: url('#{$font-path}#{$font-filename}.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}#{$font-filename}.woff') format('woff'),
+    url('#{$font-path}#{$font-filename}.ttf') format('truetype'),
+    url('#{$font-path}#{$font-filename}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@mixin google-font($font-name, $font-family){
+  @import url("http://fonts.googleapis.com/css?family="+$font-name+":"+unquote($font-family));
+}
+
+/*Border-radius*/
+@mixin border-radius($radius: 6px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/*Box-shadow*/
+@mixin box-shadow($left, $top, $blur, $color, $inset:""){
+  -webkit-box-shadow:$left $top $blur $color unquote($inset);
+  -moz-box-shadow:$left $top $blur $color unquote($inset);
+  box-shadow:$left $top $blur $color unquote($inset);
+}
+
+@mixin box-shadow-no(){
+  -moz-box-shadow: none!important;
+  -o-box-shadow: none!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+}
+
+/*Buttons*/
+@mixin button($bg-color, $color, $font, $width, $align, $opacity, $padding: "", $radius: ""){
+  background-color: $bg-color;
+  color: $color;
+  font-family: $font;
+  width: $width;
+  text-align: $align;
+  opacity: $opacity;
+  padding: unquote($padding);
+  @include border-radius($radius);
+  border:0;
+  outline: 0;
+}
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder{color:$color;}
+  &:-moz-placeholder{color:$color;}
+  &::-moz-placeholder{color:$color;}
+  &:-ms-input-placeholder{color:$color;}
+  text-overflow: ellipsis;
+}
+
+@mixin button_circle($align, $padding: "", $radius: ""){
+  width: 30px;
+  height: 30px;
+  text-align: $align;
+  padding: unquote($padding);
+  @include border-radius($radius);
+  border:0;
+  outline: 0;
+}
+
+
+/*Calculate rems*/
+@function calculateRem($size) {
+  $remSize: $size / 10;
+  @return #{$remSize}rem;
+}
+
+@function calculateHeight($size){
+  $line-height: 1;
+  @if $size < 19 and $size > 10{
+  $line-height: ($size * 1.60);
+  }
+
+  @else{
+  $line-height: ($size * 1.25);
+  }
+
+  @return #{$line-height/10}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size+px; //Fallback in px
+  font-size: calculateRem($size);
+  line-height: calculateHeight($size);
+}
+
+@mixin opacity($opacity){
+  $opacityPer: ($opacity * 100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacityPer+")";
+  filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacityPer+")";
+  opacity: $opacity;
+}

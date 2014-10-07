@@ -1,0 +1,140 @@
+//Config variables
+
+  //em breakpoints on/off
+  $em_active:false;
+    //All media queries on/off
+  $mq:true;
+  //Breakpoint media queries on/off
+  $MQ_xs:true;$MQ_sm:true;$MQ_md:true;$MQ_xl:true;
+
+
+//Import variables and mixins
+
+  @import '../../sass_helpers/_variables';
+  @import '../../sass_helpers/_mixins';
+  @import '../../sass_helpers/_modernizr';
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+@include break(xs) {
+.mqtest {
+  width: 33.33%;
+  width: 100%;
+  }
+}
+
+.condensed {
+  font-family: $font-condensed;
+}
+
+.regular {
+  font-family: $font-regular !important;
+}
+
+.bold {
+  font-family: $font-bold;
+}
+
+.strike {
+text-decoration: line-through;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-condensed;
+  font-weight: normal;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 {
+  @include fontSize($font-size1);
+}
+
+h2 {
+  @include fontSize($font-size2);
+}
+
+h3 {
+  @include fontSize($font-size3);
+}
+
+h4 {
+  @include fontSize($font-size4);
+}
+
+h5 {
+  @include fontSize($font-size5);
+}
+
+h6 {
+  @include fontSize($font-size6);
+}
+
+.h1{
+  @include fontSize($font-size1);
+}
+
+.h2{
+  @include fontSize($font-size2);
+}
+
+.h3{
+  @include fontSize($font-size3);
+}
+
+.h4{
+  @include fontSize($font-size4);
+}
+
+.h5{
+  @include fontSize($font-size5);
+}
+
+.h6{
+  @include fontSize($font-size6);
+}
+
+.heading-bold {
+  font-family: $font-bold;
+  text-transform: none;
+  letter-spacing: normal!important;
+}
+
+.heading-regular {
+  font-family: $font-regular;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+p{
+  @include fontSize($font-size5);
+  &.large{
+    @include fontSize($font-size4);
+  }
+}
+
+blockquote,
+q {
+  @include fontSize($font-size2);
+  margin:0;
+  padding:0 0 20px 20px;
+}
+
+.small{
+  @include fontSize(11);
+}
+
+.underline{
+border-bottom:1px solid $color-mediumGrey;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.letter-spacing{
+  letter-spacing: $letter-spacing;
+}
