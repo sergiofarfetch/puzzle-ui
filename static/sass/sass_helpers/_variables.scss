@@ -11,6 +11,10 @@ $color-yellow: #EFC94C;
 $color-orange: #E3793F;
 $color-red: #DF494A;
 
+$color-link: #DF494A;
+$color-visited-link: #DF494A;
+$color-focus-link: #DF494A;
+
 $google_font: true;
 
 $font-name: 'Lato';
@@ -23,12 +27,14 @@ $font-condensed: $font-name, sans-serif;
 $font-regular:  $font-name, sans-serif;
 $font-bold: $font-name, sans-serif;
 $font-gliphs: 'icons';
-$font-size1: 30;
-$font-size2: 24;
-$font-size3: 18;
-$font-size4: 16;
-$font-size5: 13;
-$font-size6: 11;
+$font-size1: 30px;
+$font-size2: 24px;
+$font-size3: 18px;
+$font-size4: 16px;
+$font-size5: 13px;
+$font-size6: 11px;
+
+$base-font-size: 16px;
 
 /*Grid*/
 $col-1: 8.33%;
@@ -44,3 +50,5 @@ $col-10: 83.33%;
 $col-11: 91.67%;
 $col-12: 100%;
 
+$global-margins : 1px, 2px, 5px, 10px, 15px, 20px;
+$global-paddings : 1px, 2px, 5px, 10px, 15px, 20px;

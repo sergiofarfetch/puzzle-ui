@@ -1,3 +1,13 @@
+/*No more padding issues*/
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+  
+
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 /**
@@ -25,24 +35,15 @@ body {
 
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
+ * We do not include all HTML5 elements, only the ones we will use
  */
 
-article,
-aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-hgroup,
 main,
 menu,
-nav,
-section,
-summary {
+nav{
   display: block;
 }
 
@@ -101,14 +102,6 @@ a:hover {
 
 /* Text-level semantics
    ========================================================================== */
-
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
@@ -195,14 +188,6 @@ svg:not(:root) {
 
 /* Grouping content
    ========================================================================== */
-
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-
-figure {
-  margin: 1em 40px;
-}
 
 /**
  * Address differences between Firefox and other browsers.

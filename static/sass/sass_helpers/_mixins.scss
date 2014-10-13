@@ -72,30 +72,10 @@
   outline: 0;
 }
 
-
-/*Calculate rems*/
-@function calculateRem($size) {
-  $remSize: $size / 10;
-  @return #{$remSize}rem;
-}
-
-@function calculateHeight($size){
-  $line-height: 1;
-  @if $size < 19 and $size > 10{
-  $line-height: ($size * 1.60);
-  }
-
-  @else{
-  $line-height: ($size * 1.25);
-  }
-
-  @return #{$line-height/10}rem;
-}
-
 @mixin fontSize($size) {
-  font-size: $size+px; //Fallback in px
-  font-size: calculateRem($size);
-  line-height: calculateHeight($size);
+  font-size: $size; //Fallback in px
+  font-size: calculateEm($size);
+  line-height: calculateLineHeight($size);
 }
 
 @mixin opacity($opacity){
@@ -104,3 +84,46 @@
   filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacityPer+")";
   opacity: $opacity;
 }
+
+/*HAVE GLOBAL MARGINS TO USE*/
+@mixin margin($margins: ($global-margins)){
+   @each $value in $margins {
+      .m-#{$value} { 
+        margin: calculateEm($value);
+      }
+      .mt-#{$value} { 
+        margin-top: calculateEm($value);
+      }
+      .mb-#{$value} { 
+        margin-bottom: calculateEm($value);
+      }
+      .ml-#{$value} { 
+        margin-left: calculateEm($value);
+      }
+      .mr-#{$value} { 
+        margin-right: calculateEm($value);
+      }
+  }
+}
+
+/*HAVE GLOBAL PADDINGS TO USE*/
+@mixin padding($paddings: ($global-paddings)){
+   @each $value in $paddings { 
+      .p-#{$value} { 
+        padding: calculateEm($value);
+      }
+      .pt-#{$value} { 
+        padding-top: calculateEm($value);
+      }
+      .pb-#{$value} { 
+        padding-bottom: calculateEm($value);
+      }
+      .pl-#{$value} { 
+        padding-left: calculateEm($value);
+      }
+      .pr-#{$value} { 
+        padding-right: calculateEm($value);
+      }
+  }
+}
+

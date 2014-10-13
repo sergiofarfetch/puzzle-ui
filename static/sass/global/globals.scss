@@ -1,0 +1,269 @@
+@import '../sass_helpers/_variables';
+@import '../sass_helpers/_functions';
+@import '../sass_helpers/_mixins';
+
+/* ---- Clearfixes - check if we really need this ---- */
+.row:before,
+.row:after,
+.clearfix:before,
+.clearfix:after {
+  content:'';
+  display:table;
+}
+.row:after,
+.clearfix:after {
+  clear:both;
+}
+.row,
+.clearfix {
+  zoom:1;
+}
+
+
+/* ---- GRIDS - check how to do it responsible ---- */
+
+.row {
+  width:100%; 
+  margin:0 auto;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  min-height:calculateEm(1px);
+  float:left; 
+  padding-left:calculateEm(10px);
+  padding-right:calculateEm(10px);
+  position:relative;
+}
+
+.col-1 {
+  width:$col-1;
+}
+.col-2 {
+  width:$col-2;
+}
+.col-3 {
+  width:$col-3;
+}
+.col-4 {
+  width:$col-4;
+}
+.col-5 {
+  width:$col-5;
+}
+.col-6 {
+  width:$col-6;
+}
+.col-7 {
+  width:$col-7;
+}
+.col-8 {
+  width:$col-8;
+}
+.col-9 {
+  width:$col-9;
+}
+.col-10 {
+  width:$col-10;
+}
+.col-11 {
+  width:$col-11;
+}
+.col-12 {
+  width:$col-12;
+}
+
+/* ---- Colors ---- */
+.color-black{
+  color: $color-black;
+}
+
+.color-darkGrey{
+  color: $color-darkGrey;
+}
+
+.color-mediumGrey{
+  color: $color-mediumGrey;
+}
+.color-lightGrey{
+  color: $color-lightGrey;
+}
+.color-offWhite{
+  color: $color-offWhite;
+}
+.color-white{
+  color: $color-white;
+}
+.color-blue{
+  color: $color-blue;
+}
+.color-green{
+  color: $color-green;
+}
+.color-yellow{
+  color: $color-yellow;
+}
+.color-orange{
+  color: $color-orange;
+}
+.color-red{
+  color: $color-red;
+}
+
+.bgcolor-black{
+  background-color: $color-black;
+}
+
+.bgcolor-darkGrey{
+  background-color: $color-darkGrey;
+}
+
+.bgcolor-mediumGrey{
+  background-color: $color-mediumGrey;
+}
+.bgcolor-lightGrey{
+  background-color: $color-lightGrey;
+}
+.bgcolor-offWhite{
+  background-color: $color-offWhite;
+}
+.bgcolor-white{
+  background-color: $color-white;
+}
+.bgcolor-blue{
+  background-color: $color-blue;
+}
+.bgcolor-green{
+  background-color: $color-green;
+}
+.bgcolor-yellow{
+  background-color: $color-yellow;
+}
+.bgcolor-orange{
+  background-color: $color-orange;
+}
+.bgcolor-red{
+  background-color: $color-red;
+}
+
+/* ---- MARGINS make them in em---- */
+@include margin;
+
+
+/* ---- PADDINGS make them in em---- */
+@include padding;
+
+
+/* ---- TEXT Aligns---- */
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+.text-justify {text-align: justify;}
+
+h1{
+  @include fontSize($font-size1);
+}
+h2{
+  @include fontSize($font-size2);
+}
+h3{
+  @include fontSize($font-size3);
+}
+h4{
+  @include fontSize($font-size4);
+}
+h5{
+  @include fontSize($font-size5);
+}
+h6{
+  @include fontSize($font-size6);
+}
+
+.big-text{
+  @include fontSize($font-size1);
+}
+.normal-text{
+  @include fontSize($font-size3);
+}
+.small-text{
+ @include fontSize($font-size6); 
+}
+
+a {
+  color: $color-link;
+  text-decoration: none; 
+  line-height: inherit; 
+}
+
+a:hover {
+  color: $color-visited-link;
+}
+
+a:focus {
+  color: $color-focus-link;
+  outline: none; 
+}
+
+p {
+  margin-bottom: calculateEm(10px);
+  padding:0;
+  font-size: calculateEm(14px);
+  line-height: calculateEm(28px);
+}
+
+p span {
+  color: #46aae3; 
+}
+
+p a, 
+p a:visited {
+  line-height: inherit; 
+}
+
+/* ---- Lists ---- */
+ul, ol, dl { 
+  font: normal 14px/24px "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; 
+  margin-bottom: 8px; 
+  list-style-position: inside; 
+  text-indent: 5px; 
+  color: #333333; 
+}
+ul li ul, 
+ul li ol { 
+  margin-left: 15px; 
+  margin-bottom: 0;
+}
+ul.square {list-style-type: square;}
+ul.circle {list-style-type: circle;}
+ul.disc {list-style-type: disc;}
+ul.no-bullet { list-style: none; }
+
+ul.square li ul, 
+ul.circle li ul, 
+ul.disc li ul, 
+ul.no-bullet li ul {
+  margin-left: 15px; 
+}
+ol li ul, ol li ol { 
+  margin-left: 20px; 
+  margin-bottom: 0; 
+}
+dl dt {
+  font-size:16px; 
+  line-height: 24px;
+}
+dl dd {
+  margin-left: 15px;
+}
+
+
