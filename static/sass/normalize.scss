@@ -1,6 +1,6 @@
-
+/*
 @import 'sass_helpers/_variables';
-@import 'sass_helpers/_mixins';
+@import 'sass_helpers/_mixins';*/
 
 @if ($google_font){
   @include google-font($font-name, $font-family);

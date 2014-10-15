@@ -85,7 +85,7 @@
   opacity: $opacity;
 }
 
-/*HAVE GLOBAL MARGINS TO USE*/
+/*Have global margins to use*/
 @mixin margin($margins: ($global-margins)){
    @each $value in $margins {
       .m-#{$value} { 
@@ -106,7 +106,7 @@
   }
 }
 
-/*HAVE GLOBAL PADDINGS TO USE*/
+/*Have global paddings to use*/
 @mixin padding($paddings: ($global-paddings)){
    @each $value in $paddings { 
       .p-#{$value} { 

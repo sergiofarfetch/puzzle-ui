@@ -1,0 +1,79 @@
+/* ---- Clearfixes - check if we really need this ---- */
+.row:before,
+.row:after,
+.clearfix:before,
+.clearfix:after {
+  content:'';
+  display:table;
+}
+.row:after,
+.clearfix:after {
+  clear:both;
+}
+.row,
+.clearfix {
+  zoom:1;
+}
+
+/* ---- GRIDS - check how to do it responsible ---- */
+
+.row {
+  width:100%; 
+  margin:0 auto;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  min-height:calculateEm(1px);
+  float:left; 
+  padding-left:calculateEm(10px);
+  padding-right:calculateEm(10px);
+  position:relative;
+}
+
+.col-1 {
+  width:$col-1;
+}
+.col-2 {
+  width:$col-2;
+}
+.col-3 {
+  width:$col-3;
+}
+.col-4 {
+  width:$col-4;
+}
+.col-5 {
+  width:$col-5;
+}
+.col-6 {
+  width:$col-6;
+}
+.col-7 {
+  width:$col-7;
+}
+.col-8 {
+  width:$col-8;
+}
+.col-9 {
+  width:$col-9;
+}
+.col-10 {
+  width:$col-10;
+}
+.col-11 {
+  width:$col-11;
+}
+.col-12 {
+  width:$col-12;
+}

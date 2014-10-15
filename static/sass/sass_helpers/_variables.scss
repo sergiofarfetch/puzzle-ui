@@ -1,4 +1,4 @@
-/*Color*/
+/*Colors*/
 $color-black: #1F1F1F;
 $color-darkGrey: #3F3F3F;
 $color-mediumGrey: #D1D1D1;
@@ -11,48 +11,44 @@ $color-yellow: #EFC94C;
 $color-orange: #E3793F;
 $color-red: #DF494A;
 
+/*Colors used for Buttons*/
 $color-blue-active : #324C5D;
 $color-blue-hover : #324C5D;
 $color-blue-inactive : #324C5D;
-
 $color-red-active : #DF494A;
 $color-red-hover : #DF494A;
 $color-red-inactive : #DF494B;
-
 $color-green-active : #46B19D;
 $color-green-hover : #46B19D;
 $color-green-inactive : #324C5D;
-
 $color-yellow-active : #EFC94C;
 $color-yellow-hover : #EFC94C;
 $color-yellow-inactive : #324C5D;
 
-
-
+/*Colors used for Links*/
 $color-link: #DF494A;
 $color-visited-link: #DF494A;
 $color-focus-link: #DF494A;
 
+/*Typography*/
+//Font
 $google_font: true;
-
 $font-name: 'Lato';
 $font-family: '300,400,700';
 $font-import: 'http://fonts.googleapis.com/css?family=Lato:300,400,700';
-
-
-/*Typography*/
+//Font Names
 $font-condensed: $font-name, sans-serif;
 $font-regular:  $font-name, sans-serif;
 $font-bold: $font-name, sans-serif;
 $font-gliphs: 'icons';
+//Font Sizes
+$base-font-size: 16px;
 $font-size1: 30px;
 $font-size2: 24px;
 $font-size3: 18px;
 $font-size4: 16px;
 $font-size5: 13px;
 $font-size6: 11px;
-
-$base-font-size: 16px;
 
 /*Grid*/
 $col-1: 8.33%;
@@ -68,5 +64,6 @@ $col-10: 83.33%;
 $col-11: 91.67%;
 $col-12: 100%;
 
+/*Global Margins*/
 $global-margins : 1px, 2px, 5px, 10px, 15px, 20px;
 $global-paddings : 1px, 2px, 5px, 10px, 15px, 20px;

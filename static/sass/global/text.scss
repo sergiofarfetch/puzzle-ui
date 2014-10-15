@@ -1,0 +1,79 @@
+
+/* ---- TEXT Aligns---- */
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+.text-justify {text-align: justify;}
+
+h1{
+  @include fontSize($font-size1);
+}
+h2{
+  @include fontSize($font-size2);
+}
+h3{
+  @include fontSize($font-size3);
+}
+h4{
+  @include fontSize($font-size4);
+}
+h5{
+  @include fontSize($font-size5);
+}
+h6{
+  @include fontSize($font-size6);
+}
+
+.big-text{
+  @include fontSize($font-size1);
+}
+.normal-text{
+  @include fontSize($font-size3);
+}
+.small-text{
+ @include fontSize($font-size6); 
+}
+
+a {
+  color: $color-link;
+  text-decoration: none; 
+  line-height: inherit; 
+}
+
+a:hover {
+  color: $color-visited-link;
+}
+
+a:focus {
+  color: $color-focus-link;
+  outline: none; 
+}
+
+p {
+  margin-bottom: calculateEm(10px);
+  padding:0;
+  font-size: calculateEm(14px);
+  line-height: calculateEm(28px);
+}
+
+p span {
+  color: #46aae3; 
+}
+
+p a, 
+p a:visited {
+  line-height: inherit; 
+}
+
+
+.small{
+  @include fontSize($font-size6);
+}
+
+.underline{
+border-bottom:1px solid $color-mediumGrey;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}

@@ -1,21 +1,21 @@
-/*Color*/
+/*Colors*/
+/*Colors used for Buttons*/
+/*Colors used for Links*/
 /*Typography*/
 /*Grid*/
+/*Global Margins*/
+/*Calculate em*/
+/*Calculate rems*/
+/*Calculate line-heights*/
 /*Font face*/
 /*Border-radius*/
 /*Box-shadow*/
 /*Buttons*/
-/*HAVE GLOBAL MARGINS TO USE*/
-/*HAVE GLOBAL PADDINGS TO USE*/
-/*Color*/
-/*Typography*/
-/*Grid*/
-/*Font face*/
-/*Border-radius*/
-/*Box-shadow*/
-/*Buttons*/
-/*HAVE GLOBAL MARGINS TO USE*/
-/*HAVE GLOBAL PADDINGS TO USE*/
+/*Have global margins to use*/
+/*Have global paddings to use*/
+/*
+@import 'sass_helpers/_variables';
+@import 'sass_helpers/_mixins';*/
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -42,8 +42,8 @@ html {
 body {
   margin: 0;
   font-size: 16px;
-  font-size: calculateEm(16px);
-  line-height: calculateLineHeight(16px); }
+  font-size: 1em;
+  line-height: 2.56em; }
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -361,18 +361,9 @@ td,
 th {
   padding: 0; }
 
-/*Color*/
-/*Typography*/
-/*Grid*/
-/*Calculate em*/
-/*Calculate rems*/
-/*Calculate line-heights*/
-/*Font face*/
-/*Border-radius*/
-/*Box-shadow*/
-/*Buttons*/
-/*HAVE GLOBAL MARGINS TO USE*/
-/*HAVE GLOBAL PADDINGS TO USE*/
+/*@import '../sass_helpers/_variables';
+@import '../sass_helpers/_functions';
+@import '../sass_helpers/_mixins';*/
 /* ---- Clearfixes - check if we really need this ---- */
 .row:before,
 .row:after,
@@ -780,6 +771,17 @@ p a,
 p a:visited {
   line-height: inherit; }
 
+.small {
+  font-size: 11px;
+  font-size: 0.6875em;
+  line-height: 1.76em; }
+
+.underline {
+  border-bottom: 1px solid #d1d1d1; }
+
+.uppercase {
+  text-transform: uppercase; }
+
 /* ---- Lists ---- */
 ul, ol, dl {
   font: normal 14px/24px "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -822,18 +824,6 @@ dl dt {
 dl dd {
   margin-left: 15px; }
 
-/*Color*/
-/*Typography*/
-/*Grid*/
-/*Calculate em*/
-/*Calculate rems*/
-/*Calculate line-heights*/
-/*Font face*/
-/*Border-radius*/
-/*Box-shadow*/
-/*Buttons*/
-/*HAVE GLOBAL MARGINS TO USE*/
-/*HAVE GLOBAL PADDINGS TO USE*/
 .button::-moz-focus-inner {
   border: 0;
   padding: 0; }
